@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+.App {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('Background-game.jpg');
+ 
+}
+.divider {
+  margin-top: -10px;
+  height: 10px;
+  background-image: linear-gradient(to right, #FE502D, #77C914, #21aee1, #E04B8E);
+  background-size: 400% 400%;
+  animation: Gradient 3s ease infinite;
+}
+
+@keyframes Gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.Header {
+  background-color: #FCD24F;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: #009dff;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 2px 2px #FE502D, -2px -2px #77C914;
+}
+
+.Header h1 {
+  font-size: 24px;
+}
+
+.timer, .score {
+  font-size: 20px;
+}
+
+
+.game-container {
+  position: relative;
+  width: 1270px; /* Ajustez selon vos besoins */
+  height: 520px; /* Ajustez selon vos besoins */
+  margin : 10px auto;
+}
+
+.player {
+  position: absolute;
+  width: 50px; /* Ajustez selon vos besoins */
+  height: 50px; /* Ajustez selon vos besoins */
+  background-image: url('pacman.png');
+  background-size: cover;
+  z-index: 1;
+}
+
+.coin {
+  position: absolute;
+  width:20px;
+  height: 20px;
+  background-color: rgb(0, 213, 255);
+  border-radius: 50%;
+}
+
+.start {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:500px;
+  height: 300px;
+  
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 50px;
+  backdrop-filter: blur(5px); /* Ajoutez un flou au fond */
+  z-index: 100;
+  font-family: 'Press Start 2P', cursive;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ajoutez une ombre portée */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.start h2 {
+  margin-bottom: 100px;
+}
+
+.start button {
+  background: linear-gradient(to right, #FE502D, #77C914, #21aee1, #E04B8E);
+  background-size: 400% 400%;
+  animation: Gradient 3s ease infinite;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 2px 2px #009dff, -2px -2px #FCD24F;
+  margin-top: 10px; /* Ajustez la marge supérieure */
+}
+
+@keyframes Gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+
+.game-over, .win {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  font-family: 'Press Start 2P', cursive;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ajoutez une ombre portée */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-over h2, .win h2 {
+  margin-bottom: 10px;
+}
+
+.game-over p, .win p {
+  margin-bottom: 20px;
+}
+
+.game-over button, .win button {
+  background: linear-gradient(to right, #FE502D, #77C914, #21aee1, #E04B8E);
+  background-size: 400% 400%;
+  animation: Gradient 3s ease infinite;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 2px 2px #009dff, -2px -2px #FCD24F;
+  margin-top: 10px;
+}
